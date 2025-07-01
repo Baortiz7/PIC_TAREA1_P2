@@ -5,13 +5,11 @@ const FichaProducto = ({
   productos,
   nuevoProducto,
   setNuevoProducto,
-  esValido,
   agregarProducto,
   actualizarProducto,
   eliminarProducto,
   siguienteId
 }) => {
-  // Orden descendente por ID
   const productosOrdenados = [...productos].sort((a, b) => b.id - a.id);
 
   return (
@@ -53,9 +51,7 @@ const FichaProducto = ({
             />
           </td>
           <td>
-            <button onClick={agregarProducto}>
-              Agregar
-            </button>
+            <button onClick={agregarProducto}>Agregar</button>
           </td>
         </tr>
       </thead>

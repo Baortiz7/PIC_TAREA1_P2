@@ -7,6 +7,18 @@ const Producto = ({ id, nombre, cantidad, precio, actualizarProducto, eliminarPr
   const [nuevoPrecio, setNuevoPrecio] = useState(precio);
 
   const guardarCambios = () => {
+    if (nuevoNombre.trim() === '') {
+      alert("El nombre no puede estar vacío.");
+      return;
+    }
+    if (parseFloat(nuevaCantidad) <= 0) {
+      alert("La cantidad debe ser mayor a 0.");
+      return;
+    }
+    if (parseFloat(nuevoPrecio) <= 0) {
+      alert("El precio debe ser mayor a 0.");
+      return;
+    }
     actualizarProducto(id, nuevoNombre, nuevaCantidad, nuevoPrecio);
     setEditando(false);
   };
