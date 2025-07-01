@@ -8,7 +8,7 @@ const Navbar = () => {
         <li><Link to="/inicio">Inicio</Link></li>
         <li><Link to="/datos">Datos Informativos</Link></li>
         <li><Link to="/estadistica">Cálculos estadísticos</Link></li>
-        <li><Link to="/ecuaciones">Resolución de ecuaciones</Link></li>
+        <li><Link to="/sistema-ecuaciones">Resolución de ecuaciones</Link></li>
         <li><Link to="/inventario">Gestión de inventario</Link></li>
       </ul>
     </nav>
