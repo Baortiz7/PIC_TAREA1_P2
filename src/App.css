@@ -1,110 +1,139 @@
-/* Base del layout */
+/* Layout base */
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  background: linear-gradient(to right, #f0f4f8, #e2eafc);
+  color: #2e2e2e;
+  padding-top: 50px; /* espacio para navbar fijo */
 }
 
-/* Navbar mejorado */
+/* Navbar fijo y elegante */
 .navbar {
-  background-color: #1e1e2f;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1280px;
+  z-index: 1000;
+  background: linear-gradient(90deg, #1e1e2f, #2c3e50);
   padding: 1rem 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  /* margin-bottom removido porque navbar es fijo */
 }
 
 .navbar ul {
   display: flex;
   justify-content: center;
   list-style: none;
-  gap: 30px;
+  gap: 40px;
   padding: 0;
   margin: 0;
 }
 
 .navbar li {
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 
 .navbar li:hover {
-  transform: scale(1.1);
+  transform: translateY(-3px);
 }
 
 .navbar a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-  color: #00c9a7;
-  text-decoration: underline;
+  color: #00e6c3;
+  text-decoration: none;
 }
 
-/* Sección inventario */
+/* Sección de contenido (ejemplo inventario, inicio) */
 .inventario {
-  max-width: 700px;
+  max-width: 750px;
   margin: 2rem auto;
-  padding: 1.5rem;
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .inventario h2 {
   margin-bottom: 1.5rem;
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #1e1e2f;
+  border-bottom: 2px solid #00c9a7;
+  padding-bottom: 0.5rem;
 }
 
-/* Tabla */
+/* Tabla moderna */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 table th,
 table td {
-  padding: 0.75rem;
+  padding: 1rem;
   border: 1px solid #ddd;
   text-align: center;
 }
 
 table th {
   background-color: #1e1e2f;
-  color: white;
+  color: #ffffff;
+  font-weight: 600;
 }
 
 table tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #f4f6f8;
 }
 
 /* Inputs y botones */
 input[type="text"],
 input[type="number"] {
-  padding: 0.4rem;
-  border-radius: 6px;
+  padding: 0.6rem;
+  border-radius: 8px;
   border: 1px solid #ccc;
   width: 90%;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #00c9a7;
+  outline: none;
 }
 
 button {
   background-color: #00c9a7;
   border: none;
   color: white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
   background-color: #009f86;
+  transform: scale(1.05);
 }
 
 button:disabled {
@@ -119,9 +148,9 @@ p {
 }
 
 p.error {
-  color: red;
+  color: #e74c3c;
 }
 
 p.exito {
-  color: green;
+  color: #27ae60;
 }

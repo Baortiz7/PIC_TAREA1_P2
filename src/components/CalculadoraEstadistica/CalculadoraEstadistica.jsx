@@ -92,7 +92,7 @@ const CalculadoraEstadistica = () => {
           value={cantidad}
           onChange={manejarCantidad}
           placeholder="Ingrese el valor"
-          style={{ marginLeft: "10px", width: "100px" }}
+          style={{ marginLeft: "10px", width: "115px" }}
         />
       </label>
 
